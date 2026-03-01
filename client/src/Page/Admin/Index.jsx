@@ -13,11 +13,11 @@ import {
 } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 
-import ManagerProduct from './components/ManagerProducts/ManagerProduct';
-import DashBoard from './components/DashBoard/DashBoard';
-import ManagerCategory from './components/ManagerCategory/ManagerCategory';
-import ManagerOrder from './components/ManagerOrder/ManagerOrder';
-import ManagerUser from './components/ManagerUser/ManagerUser';
+import ManagerProduct from '../../components/ManagerProducts/ManagerProduct';
+import DashBoard from '../../components/DashBoard/DashBoard';
+import ManagerCategory from '../../components/ManagerCategory/ManagerCategory';
+import ManagerOrder from '../../components/ManagerOrder/ManagerOrder';
+import ManagerUser from '../../components/ManagerUser/ManagerUser';
 // import { requestAdmin } from '../../config/request';
 import { useNavigate } from 'react-router-dom';
 import { requestAdmin } from '../../config/request';
