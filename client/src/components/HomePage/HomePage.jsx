@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { BookOutlined } from '@ant-design/icons';
-import Cardbody from '../Cardbody/Cardbody';
+import CardBody from '../CardBody/CardBody';
 import { useStore } from '../../hooks/useStore';
 import { requestGetCategoryById, requestGetProducts } from '../../config/request';
 import logoShop from '../../assets/images/logoshop.svg';
@@ -135,17 +135,13 @@ function HomePage() {
             <div className="col-span-12 lg:col-span-3">
                 <div className="sticky top-6 space-y-6">
                     <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                        <div 
+                        <div
                             className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white cursor-pointer hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
                             onClick={() => setSelectedCategory(null)}
                         >
                             <div className="flex items-center gap-3">
                                 <div className="p-3 bg-white rounded-lg flex items-center justify-center">
-                                    <img
-                                        src={logoShop}
-                                        alt="logo shop"
-                                        className="h-12 w-auto"
-                                    />
+                                    <img src={logoShop} alt="logo shop" className="h-12 w-auto" />
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-bold">Danh mục sách</h3>
