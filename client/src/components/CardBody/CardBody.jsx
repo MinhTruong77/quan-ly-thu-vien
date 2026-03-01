@@ -1,7 +1,7 @@
 import React from 'react';
 import { Users, BookOpen } from 'lucide-react';
 
-function Cardbody({ product }) {
+function CardBody({ product }) {
     return (
         <div className="w-full max-w-sm bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer border border-gray-100 group">
             {/* Image Container */}
@@ -43,4 +43,4 @@ function Cardbody({ product }) {
     );
 }
 
-export default Cardbody;
+export default CardBody;
