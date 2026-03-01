@@ -1,8 +1,8 @@
-import Header from '../Components/Header/Header';
+import Header from '../components/Header/Header';
 import { Form, Input, Button, message } from 'antd';
 import { UserOutlined, MailOutlined, LockOutlined, PhoneOutlined, HomeOutlined } from '@ant-design/icons';
 import images from '../assets/images/imagesLogin.jpg';
-import Footer from '../Components/Footer/Footer';
+import Footer from '../components/Footer/Footer';
 import { Link, useNavigate } from 'react-router-dom';
 import { requestRegister } from '../config/request';
 import { useEffect } from 'react';

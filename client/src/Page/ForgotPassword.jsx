@@ -1,5 +1,5 @@
-import Header from '../Components/Header/Header';
-import Footer from '../Components/Footer/Footer';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 import { Input, Button, Form, message, Steps } from 'antd';
 import { MailOutlined, LockOutlined, KeyOutlined } from '@ant-design/icons';
 import { Link, useNavigate } from 'react-router-dom';

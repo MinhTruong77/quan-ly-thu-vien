@@ -1,9 +1,9 @@
-import Header from '../Components/Header/Header';
+import Header from '../components/Header/Header';
 import { Input, Button, Form } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 import images from '../assets/images/imagesLogin.jpg';
-import Footer from '../Components/Footer/Footer';
+import Footer from '../components/Footer/Footer';
 import { Link, useNavigate } from 'react-router-dom';
 import { requestLogin } from '../config/request';
 

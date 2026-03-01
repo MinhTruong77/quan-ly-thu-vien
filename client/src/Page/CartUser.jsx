@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Checkbox, Button, InputNumber, Card, Row, Col, Divider, Tag, Empty, Badge, Tooltip, message } from 'antd';
 import { DeleteOutlined, HeartOutlined, GiftOutlined, TruckOutlined, ShoppingCartOutlined } from '@ant-design/icons';
-import Header from '../Components/Header/Header';
+import Header from '../components/Header/Header';
 import { Link } from 'react-router-dom';
 import { useStore } from '../hooks/useStore';
 

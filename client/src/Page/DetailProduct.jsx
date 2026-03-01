@@ -1,8 +1,8 @@
 import { Carousel, Button, Rate, InputNumber, Badge, DatePicker, message } from 'antd';
 import { ShoppingCartOutlined, CreditCardOutlined, ShoppingOutlined, CalendarOutlined } from '@ant-design/icons';
-import Header from '../Components/Header/Header';
+import Header from '../components/Header/Header';
 import { useState, useRef, useEffect } from 'react';
-import Footer from '../Components/Footer/Footer';
+import Footer from '../components/Footer/Footer';
 
 import { requestCreateCart, requestCreateViewProduct, requestGetProductById } from '../config/request';
 import { useParams } from 'react-router-dom';

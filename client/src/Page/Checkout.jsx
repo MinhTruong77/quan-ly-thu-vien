@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CheckCircle, HelpCircle, Truck, CreditCard, Smartphone, Banknote, User, MapPin, Phone } from 'lucide-react';
-import Header from '../Components/Header/Header';
+import Header from '../components/Header/Header';
 import { Link } from 'react-router-dom';
 import { useStore } from '../hooks/useStore';
 import { requestUpdateInfoCart, requestCreatePayment } from '../config/request';
@@ -94,7 +94,9 @@ function Checkout() {
                                                             <h3 className="text-sm font-medium text-gray-900 line-clamp-2 mb-2">
                                                                 {item.product?.nameProduct || 'N/A'}
                                                             </h3>
-                                                            <p className="text-xs text-gray-500 mb-2">SL: {item.quantity || 0}</p>
+                                                            <p className="text-xs text-gray-500 mb-2">
+                                                                SL: {item.quantity || 0}
+                                                            </p>
                                                             <div className="flex items-center space-x-2">
                                                                 <span className="text-red-600 font-semibold">
                                                                     {item.product?.price?.toLocaleString() || '0'}đ
@@ -327,15 +329,36 @@ function Checkout() {
                             </div>
 
                             <div className="p-6">
-                                    <div className="space-y-4">
-                                        <div className="flex justify-between items-center">
-                                            <span className="text-gray-600">Tổng tiền hàng</span>
-                                            <span className="font-medium">
+                                <div className="space-y-4">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-gray-600">Tổng tiền hàng</span>
+                                        <span className="font-medium">
+                                            {dataCart && dataCart.length > 0
+                                                ? dataCart
+                                                      .reduce(
+                                                          (total, item) =>
+                                                              total +
+                                                              (item?.product?.price || 0) * (item?.quantity || 0),
+                                                          0,
+                                                      )
+                                                      .toLocaleString()
+                                                : '0'}
+                                            đ
+                                        </span>
+                                    </div>
+
+                                    <div className="border-t border-gray-200 pt-4">
+                                        <div className="flex justify-between items-center mb-2">
+                                            <span className="text-lg font-semibold text-gray-900">
+                                                Tổng tiền thanh toán
+                                            </span>
+                                            <span className="text-2xl font-bold text-red-600">
                                                 {dataCart && dataCart.length > 0
                                                     ? dataCart
                                                           .reduce(
                                                               (total, item) =>
-                                                                  total + (item?.product?.price || 0) * (item?.quantity || 0),
+                                                                  total +
+                                                                  (item?.product?.price || 0) * (item?.quantity || 0),
                                                               0,
                                                           )
                                                           .toLocaleString()
@@ -343,27 +366,7 @@ function Checkout() {
                                                 đ
                                             </span>
                                         </div>
-
-                                        <div className="border-t border-gray-200 pt-4">
-                                            <div className="flex justify-between items-center mb-2">
-                                                <span className="text-lg font-semibold text-gray-900">
-                                                    Tổng tiền thanh toán
-                                                </span>
-                                                <span className="text-2xl font-bold text-red-600">
-                                                    {dataCart && dataCart.length > 0
-                                                        ? dataCart
-                                                              .reduce(
-                                                                  (total, item) =>
-                                                                      total +
-                                                                      (item?.product?.price || 0) * (item?.quantity || 0),
-                                                                  0,
-                                                              )
-                                                              .toLocaleString()
-                                                        : '0'}
-                                                    đ
-                                                </span>
-                                            </div>
-                                        </div>
+                                    </div>
 
                                     <div className="text-xs text-gray-500 bg-gray-50 p-3 rounded-lg">
                                         Giá này đã bao gồm thuế GTGT, phí đóng gói, phí vận chuyển và các chi phí phát

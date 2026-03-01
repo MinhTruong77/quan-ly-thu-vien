@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Footer from '../Components/Footer/Footer';
-import Header from '../Components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
 import { requestGetPaymentById } from '../config/request';
 import { useStore } from '../hooks/useStore';
 import {
