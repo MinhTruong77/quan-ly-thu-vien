@@ -18,17 +18,10 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const allowedOrigins = ['http://localhost:5173', process.env.DOMAIN_URL].filter(Boolean);
-
+// ✅ MỞ FULL CORS (TEST PRODUCTION)
 app.use(
     cors({
-        origin: (origin, callback) => {
-            if (!origin || allowedOrigins.includes(origin)) {
-                callback(null, true);
-            } else {
-                callback(new Error('Not allowed by CORS'));
-            }
-        },
+        origin: true,
         credentials: true,
     }),
 );
