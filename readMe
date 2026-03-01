@@ -1,0 +1,17 @@
+cài đặt lưu trữ ảnh : https://cloudinary.com/
+
+password DB : MvlrLxAewtMFTNZn
+password chinh web: dAwD3MnWTMJdRvDs
+setup google : https://console.cloud.google.com/welcome?inv=1&invt=Ab0bfw&project=booksendmail
+
+urii2 : https://developers.google.com/oauthplayground
+
+https://mail.google.com
+
+admin: minhtruong09082006@gmail.com
+pass: 123456
+
+Kết nối Internet: Để kết nối MongoDB Atlas
+Thông tin Database
+Dự án sử dụng MongoDB Atlas (Cloud Database).
+Database đã được cấu hình sẵn trong file .env và có dữ liệu demo.
